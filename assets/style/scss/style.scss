@@ -1,0 +1,15 @@
+// Reset / definições iniciais
+@import "./geral/colors";
+@import "./geral/functions";
+@import "./geral/mixins";
+@import "./geral/global";
+@import "./geral/typo";
+@import "./geral/animations";
+
+@import "./geral/header";
+@import "./geral/footer";
+
+// Páginas do site
+
+// Painel de Administração
+@import "./painel-admin/painel-admin";
