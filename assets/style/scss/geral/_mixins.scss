@@ -109,3 +109,13 @@ $s11: px-rem(160px);
     font-weight: 500;
   }
 }
+
+@mixin button-2 {
+  background-color: $c2;
+  color: $w1;
+  border: none;
+  cursor: pointer;
+  @include text-2;
+  padding: $s2 $s4;
+  border-radius: 50px;
+}
