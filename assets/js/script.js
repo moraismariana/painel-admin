@@ -1,3 +1,3 @@
-import cardapioLista from "./modules/cardapio-lista.js";
+import initListSizeStyle from "./modules/list-size-style.js";
 
-cardapioLista();
+initListSizeStyle();

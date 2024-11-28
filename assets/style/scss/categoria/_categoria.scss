@@ -1,4 +1,4 @@
-#cardapio {
+#categoria {
   min-height: 100svh;
   position: relative;
   .footer {
@@ -8,7 +8,7 @@
   }
 }
 
-.cardapio-conteudo {
+.categoria-conteudo {
   position: relative;
   top: calc(50svh - 100px);
   transform: translateY(-50%);
@@ -18,12 +18,12 @@
   }
 }
 
-.cardapio-conteudo[data-list-size-g="true"] {
+.categoria-conteudo[data-list-size-g="true"] {
   position: static;
   transform: none;
 }
 
-.cardapio-intro {
+.categoria-intro {
   @include container;
   text-align: center;
   margin-top: $s8;
@@ -39,10 +39,9 @@
   }
 }
 
-.cardapio-nav {
+.categoria-nav {
   @include container;
   padding-bottom: $s10 + px-rem(51px);
-
   ul {
     display: flex;
     flex-direction: column;
@@ -52,19 +51,28 @@
     @include box-shadow;
     padding: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    cursor: pointer;
-    & > a {
-      display: block;
-      // background-color: azure;
-      @include text-1;
-      padding: $s5 $s6;
-      width: 100%;
-      align-items: center;
+    div:nth-of-type(1) {
+      padding: $s5 0 $s5 $s6;
+      h3 {
+        @include text-1;
+        margin-bottom: $s2;
+        span {
+          color: $c3;
+          margin-left: $s5;
+          @include text-2;
+        }
+      }
+      p {
+        color: $c3;
+        @include text-2;
+      }
     }
-    & > div {
-      box-sizing: border-box;
+    div:nth-of-type(2) {
       min-width: 135px;
+      box-sizing: border-box;
+
       padding: $s5 $s6;
       display: flex;
       align-items: center;
