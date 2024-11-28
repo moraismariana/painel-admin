@@ -1,0 +1,75 @@
+#cardapio {
+  min-height: 100svh;
+  position: relative;
+  .footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+// PROBLEMA QUANDO LISTA TEM MUITOS ITENS
+.cardapio-conteudo {
+  position: relative;
+  top: calc(50svh - 100px);
+  transform: translateY(-50%);
+  @include resp-height(800px) {
+    position: static;
+    transform: none;
+  }
+}
+
+.cardapio-conteudo[data-lista-grande="true"] {
+  position: static;
+  transform: none;
+}
+
+.cardapio-intro {
+  @include container;
+  text-align: center;
+  margin-top: $s8;
+  margin-bottom: $s8;
+  h1 {
+    @include title-1;
+    color: $c1;
+    margin-bottom: $s1;
+  }
+  h2 {
+    @include title-2;
+    color: $c2;
+  }
+}
+
+.cardapio-nav {
+  @include container;
+  padding-bottom: $s10 + px-rem(51px);
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: $s4;
+  }
+  li {
+    @include box-shadow;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    & > a {
+      display: block;
+      // background-color: azure;
+      @include text-1;
+      padding: $s5 $s6;
+      width: 100%;
+      align-items: center;
+    }
+    & > div {
+      box-sizing: border-box;
+      min-width: 135px;
+      padding: $s5 $s6;
+      display: flex;
+      align-items: center;
+      gap: $s4;
+    }
+  }
+}
