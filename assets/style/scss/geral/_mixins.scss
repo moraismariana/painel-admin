@@ -96,3 +96,16 @@ $s11: px-rem(160px);
     // padding: $s5 + px-rem(2px) $s6;
   }
 }
+
+@mixin button {
+  background-color: $w1;
+  cursor: pointer;
+  @include text-2;
+  @include shadow;
+  padding: $s2 $s4;
+  border-radius: 50px;
+  &:hover {
+    padding: $s2 $s4 + px-rem(2px);
+    font-weight: 500;
+  }
+}
