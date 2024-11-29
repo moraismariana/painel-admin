@@ -10,7 +10,7 @@
 
 .painel-admin-conteudo[data-list-size-p="true"] {
   position: relative;
-  top: calc(50svh - 100px);
+  top: calc(50vh - 100px);
   transform: translateY(-50%);
   @include resp-height(730px) {
     position: static;
