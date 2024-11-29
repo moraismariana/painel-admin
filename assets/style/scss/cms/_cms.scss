@@ -3,8 +3,8 @@
 }
 
 .cms-header {
-  //   @include container;
-  //   padding: 0;
+  @include container;
+  padding: 0;
   position: absolute;
   width: calc(100% - 40px);
   left: calc(50% - 20px);
@@ -32,5 +32,6 @@
   }
   button {
     @include button;
+    font-size: 1em;
   }
 }
