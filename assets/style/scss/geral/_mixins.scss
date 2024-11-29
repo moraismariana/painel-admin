@@ -95,6 +95,10 @@ $s11: px-rem(160px);
     margin-right: 0;
     // padding: $s5 + px-rem(2px) $s6;
   }
+  @include screen(tablet) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @mixin button {

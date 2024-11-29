@@ -12,8 +12,8 @@ export default function initListSizeStyle() {
   const listaItens = document.querySelectorAll("[data-list-size-item]");
 
   if (conteudo && listaItens) {
-    if (listaItens.length >= +conteudo.dataset.listSizeTam) {
-      conteudo.dataset.listSizeG = "true";
+    if (listaItens.length <= +conteudo.dataset.listSizeTam) {
+      conteudo.dataset.listSizeP = "true";
     }
   }
 }

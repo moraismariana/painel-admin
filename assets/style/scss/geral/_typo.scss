@@ -2,6 +2,9 @@
   font-family: "Urbanist";
   font-size: px-rem(38px);
   font-weight: 500;
+  @include screen(tablet) {
+    font-size: px-rem(34px);
+  }
 }
 
 @mixin title-2 {
@@ -14,10 +17,16 @@
   font-family: "Urbanist";
   font-size: px-rem(20px);
   font-weight: 400;
+  @include screen(tablet) {
+    font-size: px-rem(17.5px);
+  }
 }
 
 @mixin text-2 {
   font-family: "Urbanist";
   font-size: px-rem(17.5px);
   font-weight: 400;
+  @include screen(tablet) {
+    font-size: 1em;
+  }
 }

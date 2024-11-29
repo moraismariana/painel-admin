@@ -8,7 +8,7 @@
   }
 }
 
-.categoria-conteudo {
+.categoria-conteudo[data-list-size-p="true"] {
   position: relative;
   top: calc(50svh - 100px);
   transform: translateY(-50%);
@@ -16,11 +16,6 @@
     position: static;
     transform: none;
   }
-}
-
-.categoria-conteudo[data-list-size-g="true"] {
-  position: static;
-  transform: none;
 }
 
 .categoria-intro {
