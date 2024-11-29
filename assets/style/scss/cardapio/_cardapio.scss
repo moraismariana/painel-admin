@@ -1,5 +1,5 @@
 #cardapio {
-  min-height: 100svh;
+  min-height: 100vh;
   position: relative;
   .footer {
     position: absolute;
@@ -10,9 +10,9 @@
 
 .cardapio-conteudo[data-list-size-p="true"] {
   position: relative;
-  top: calc(50svh - 100px);
+  top: calc(50vh - 100px);
   transform: translateY(-50%);
-  @include resp-height(800px) {
+  @include resp-height(730px) {
     position: static;
     transform: none;
   }
@@ -23,6 +23,10 @@
   text-align: center;
   margin-top: $s8;
   margin-bottom: $s8;
+  @include screen(notebook-m) {
+    margin-top: $s6;
+    margin-bottom: $s6;
+  }
   h1 {
     @include title-1;
     color: $c1;
@@ -37,6 +41,9 @@
 .cardapio-nav {
   @include container;
   padding-bottom: $s10 + px-rem(51px);
+  @include screen(tablet) {
+    padding-bottom: $s9 + px-rem(51px);
+  }
 
   ul {
     display: flex;
@@ -47,20 +54,22 @@
     @include box-shadow;
     padding: 0;
     display: flex;
+    gap: $s5;
     justify-content: space-between;
     cursor: pointer;
     & > a {
       display: block;
       // background-color: azure;
       @include text-1;
-      padding: $s5 $s6;
+      padding: $s5 0 $s5 $s6;
+
       width: 100%;
       align-items: center;
     }
     & > div {
       box-sizing: border-box;
-      min-width: 135px;
-      padding: $s5 $s6;
+      min-width: 95px;
+      padding: $s5 $s6 $s5 0;
       display: flex;
       align-items: center;
       gap: $s4;

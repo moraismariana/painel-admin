@@ -25,20 +25,12 @@
   margin-bottom: $s8;
   @include screen(notebook-m) {
     margin-top: $s6;
-    margin-bottom: $s7;
-  }
-  @include screen(mobile) {
-    margin-top: $s6;
     margin-bottom: $s6;
   }
   h1 {
     @include title-1;
     color: $c1;
     margin-bottom: $s1;
-    @include screen(mobile) {
-      max-width: 11ch;
-      @include align-div;
-    }
   }
   p {
     @include text-1;
@@ -49,7 +41,7 @@
 .painel-admin-nav {
   @include container;
   padding-bottom: $s10 + px-rem(51px);
-  @include screen(mobile) {
+  @include screen(tablet) {
     padding-bottom: $s9 + px-rem(51px);
   }
 
