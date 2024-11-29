@@ -1,5 +1,5 @@
 #painel-admin {
-  min-height: 100svh;
+  min-height: 100vh;
   position: relative;
   .footer {
     position: absolute;
@@ -50,7 +50,7 @@
   @include container;
   padding-bottom: $s10 + px-rem(51px);
   @include screen(mobile) {
-    padding-bottom: $s8 + px-rem(51px);
+    padding-bottom: $s9 + px-rem(51px);
   }
 
   ul {
