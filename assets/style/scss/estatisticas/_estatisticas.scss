@@ -32,9 +32,7 @@
   }
   p {
     @include text-1;
-    color: $c3;
     span {
-      color: $c2;
       display: block;
       font-size: px-rem(60px);
     }

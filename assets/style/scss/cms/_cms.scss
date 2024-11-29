@@ -1,0 +1,36 @@
+#cms {
+  background-color: $c1;
+}
+
+.cms-header {
+  //   @include container;
+  //   padding: 0;
+  position: absolute;
+  width: calc(100% - 40px);
+  left: calc(50% - 20px);
+  transform: translateX(-50%);
+  background-color: $w2;
+  @include border;
+  margin: $s4;
+}
+
+.cms-header-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: $s4;
+  a {
+    @include arrow-link;
+  }
+  p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    @include text-2;
+    font-weight: 500;
+  }
+  button {
+    @include button;
+  }
+}

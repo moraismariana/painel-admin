@@ -104,6 +104,9 @@ $s11: px-rem(160px);
   @include shadow;
   padding: $s2 $s4;
   border-radius: 50px;
+  outline: none;
+  border: none;
+  color: $c2;
   &:hover {
     padding: $s2 $s4 + px-rem(2px);
     font-weight: 500;
@@ -118,4 +121,12 @@ $s11: px-rem(160px);
   @include text-2;
   padding: $s2 $s4;
   border-radius: 50px;
+}
+
+@mixin arrow-link {
+  @include button;
+  display: flex;
+  max-width: fit-content;
+  align-items: center;
+  gap: $s4;
 }
