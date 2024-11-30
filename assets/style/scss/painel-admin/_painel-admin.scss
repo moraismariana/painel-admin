@@ -23,7 +23,7 @@
   text-align: center;
   margin-top: $s8;
   margin-bottom: $s8;
-  @include screen(notebook-m) {
+  @include screen(tablet) {
     margin-top: $s7;
     margin-bottom: $s6;
   }
