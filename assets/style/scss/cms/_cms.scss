@@ -3,7 +3,8 @@
 }
 
 .cms-header {
-  @include container;
+  box-sizing: border-box;
+  max-width: 1300px;
   padding: 0;
   position: absolute;
   width: calc(100% - 40px);
@@ -17,21 +18,38 @@
 .cms-header-content {
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: $s4;
+  gap: $s5;
+  div {
+    display: flex;
+    align-items: center;
+    gap: $s4;
+    & > p {
+      @include text-2;
+      cursor: default;
+      @include screen(mobile) {
+        display: none;
+      }
+    }
+  }
   a {
     @include arrow-link;
-  }
-  p {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    @include text-2;
-    font-weight: 500;
+    min-width: 48px;
+    box-sizing: border-box;
   }
   button {
     @include button;
+    white-space: nowrap;
     font-size: 1em;
+  }
+  @include screen(tablet) {
+    padding: $s3 $s4;
+
+    p {
+      position: static;
+      transform: none;
+    }
   }
 }
