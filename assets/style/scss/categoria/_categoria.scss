@@ -1,5 +1,5 @@
 #categoria {
-  min-height: 100svh;
+  min-height: 100vh;
   position: relative;
   .footer {
     position: absolute;
@@ -10,9 +10,9 @@
 
 .categoria-conteudo[data-list-size-p="true"] {
   position: relative;
-  top: calc(50svh - 100px);
+  top: calc(50vh - 100px);
   transform: translateY(-50%);
-  @include resp-height(800px) {
+  @include resp-height(730px) {
     position: static;
     transform: none;
   }
@@ -23,6 +23,10 @@
   text-align: center;
   margin-top: $s8;
   margin-bottom: $s8;
+  @include screen(notebook-m) {
+    margin-top: $s6;
+    margin-bottom: $s6;
+  }
   h1 {
     @include title-1;
     color: $c1;
@@ -37,6 +41,10 @@
 .categoria-nav {
   @include container;
   padding-bottom: $s10 + px-rem(51px);
+  @include screen(tablet) {
+    padding-bottom: $s9 + px-rem(51px);
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -47,32 +55,56 @@
     cursor: default;
     padding: 0;
     display: flex;
+    gap: $s5;
     align-items: center;
     justify-content: space-between;
+
     div:nth-of-type(1) {
       padding: $s5 0 $s5 $s6;
       h3 {
         @include text-1;
         margin-bottom: $s2;
+        display: flex;
+        gap: $s5;
+        align-items: end;
         span {
           color: $c3;
-          margin-left: $s5;
           @include text-2;
+          white-space: nowrap;
+        }
+        @include screen(tablet) {
+          flex-direction: column-reverse;
+          align-items: normal;
+          gap: $s2;
         }
       }
       p {
         color: $c3;
         @include text-2;
       }
+      @include screen(tablet) {
+        padding: $s5 $s6;
+        min-width: 0;
+      }
     }
     div:nth-of-type(2) {
-      min-width: 135px;
+      min-width: 95px;
       box-sizing: border-box;
 
-      padding: $s5 $s6;
+      padding: $s5 $s6 $s5 0;
       display: flex;
       align-items: center;
       gap: $s4;
+      @include screen(tablet) {
+        padding: 0 $s6 $s5 $s6;
+        min-width: 0;
+        gap: $s5;
+        margin-left: auto;
+      }
+    }
+    @include screen(tablet) {
+      flex-direction: column;
+      gap: 0;
     }
   }
 }
