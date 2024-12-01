@@ -125,6 +125,11 @@ $s11: px-rem(160px);
   @include text-2;
   padding: $s2 $s4;
   border-radius: 50px;
+  transition: 0.3s;
+  &:hover {
+    padding: $s2 $s4 + px-rem(2px);
+    font-weight: 500;
+  }
 }
 
 @mixin arrow-link {
