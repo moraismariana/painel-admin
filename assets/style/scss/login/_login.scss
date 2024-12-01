@@ -1,5 +1,5 @@
 #login {
-  min-height: 100svh;
+  min-height: 100vh;
   position: relative;
   .footer {
     position: absolute;
@@ -10,9 +10,9 @@
 
 .login-conteudo {
   position: relative;
-  top: calc(50svh - 110px);
+  top: calc(50vh - 110px);
   transform: translateY(-50%);
-  @include resp-height(750px) {
+  @include resp-height(730px) {
     position: static;
     transform: none;
   }
@@ -21,8 +21,10 @@
 .login-conteudo {
   @include container;
   margin-top: $s8;
-  // margin-bottom: $s8;
   padding-bottom: $s9 + px-rem(51px);
+  @include screen(tablet) {
+    margin-top: $s7;
+  }
   h1 {
     @include title-1;
     color: $c1;
