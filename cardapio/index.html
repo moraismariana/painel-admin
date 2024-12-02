@@ -23,7 +23,7 @@
             <p>Painel de Administração</p>
         </a>
         <img src="../assets/img/logo.svg" alt="Logo Mariana Morais">
-        <button>
+        <button data-modal="abrir" data-modal-type="create-categoria">
             <img src="../assets/img/add.svg" alt="Criar categoria">
             <p>Criar categoria</p>
         </button>
@@ -40,8 +40,8 @@
                         <p>Entradas</p>
                     </a>
                     <div>
-                        <a href="../"><img src="../assets/img/edit.svg" alt="Editar categoria"></a>
-                        <a href="../"><img src="../assets/img/delete.svg" alt="Deletar categoria"></a>
+                        <button data-modal="abrir" data-modal-type="update-categoria"><img src="../assets/img/edit.svg" alt="Editar categoria"></button>
+                        <button data-modal="abrir" data-modal-type="delete-categoria"><img src="../assets/img/delete.svg" alt="Deletar categoria"></button>
                     </div>
                 </li>
                 <li data-list-size-item>
@@ -49,8 +49,8 @@
                         <p>Saladas</p>
                     </a>
                     <div>
-                        <a href="../"><img src="../assets/img/edit.svg" alt="Editar categoria"></a>
-                        <a href="../"><img src="../assets/img/delete.svg" alt="Deletar categoria"></a>
+                        <button data-modal="abrir" data-modal-type="update-categoria"><img src="../assets/img/edit.svg" alt="Editar categoria"></button>
+                        <button data-modal="abrir" data-modal-type="delete-categoria"><img src="../assets/img/delete.svg" alt="Deletar categoria"></button>
                     </div>
                 </li>
                 <li data-list-size-item>
@@ -58,8 +58,8 @@
                         <p>Sanduíches</p>
                     </a>
                     <div>
-                        <a href="../"><img src="../assets/img/edit.svg" alt="Editar categoria"></a>
-                        <a href="../"><img src="../assets/img/delete.svg" alt="Deletar categoria"></a>
+                        <button data-modal="abrir" data-modal-type="update-categoria"><img src="../assets/img/edit.svg" alt="Editar categoria"></button>
+                        <button data-modal="abrir" data-modal-type="delete-categoria"><img src="../assets/img/delete.svg" alt="Deletar categoria"></button>
                     </div>
                 </li>
                 <li data-list-size-item>
@@ -67,8 +67,8 @@
                         <p>Pratos principais</p>
                     </a>
                     <div>
-                        <a href="../"><img src="../assets/img/edit.svg" alt="Editar categoria"></a>
-                        <a href="../"><img src="../assets/img/delete.svg" alt="Deletar categoria"></a>
+                        <button data-modal="abrir" data-modal-type="update-categoria"><img src="../assets/img/edit.svg" alt="Editar categoria"></button>
+                        <button data-modal="abrir" data-modal-type="delete-categoria"><img src="../assets/img/delete.svg" alt="Deletar categoria"></button>
                     </div>
                 </li>
                 <li data-list-size-item>
@@ -76,8 +76,8 @@
                         <p>Sobremesas</p>
                     </a>
                     <div>
-                        <a href="../"><img src="../assets/img/edit.svg" alt="Editar categoria"></a>
-                        <a href="../"><img src="../assets/img/delete.svg" alt="Deletar categoria"></a>
+                        <button data-modal="abrir" data-modal-type="update-categoria"><img src="../assets/img/edit.svg" alt="Editar categoria"></button>
+                        <button data-modal="abrir" data-modal-type="delete-categoria"><img src="../assets/img/delete.svg" alt="Deletar categoria"></button>
                     </div>
                 </li>
             </ul>
@@ -87,15 +87,42 @@
         <p>Desenvolvido por Mariana Morais © 2024.</p>
     </footer>
 
-    <section class="api-form-container">
-        <div class="api-form">
+    <section class="api-modal-container" data-modal="container" data-modal-type="create-categoria">
+        <div class="api-modal">
             <h2>Nova categoria</h2>
-            <form action="">
-                <label for="nome">Nome</label>
-                <input type="text" form="nome" id="nome">
+            <form id="create-categoria" action="">
+                <label for="create-categoria-nome">Nome</label>
+                <input type="text" for="create-categoria-nome" id="create-categoria-nome">
                 <div class="api-buttons">
-                    <button class="cancel-button">Cancelar</button>
-                    <button class="send-button" type="submit">Entrar</button>
+                    <button data-modal="fechar" data-modal-type="create-categoria" class="cancel-button">Cancelar</button>
+                    <button class="send-button" type="submit">Criar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="api-modal-container" data-modal="container" data-modal-type="update-categoria">
+        <div class="api-modal">
+            <h2>Editar categoria</h2>
+            <form id="update-categoria" action="">
+                <label for="update-categoria-nome">Nome</label>
+                <input type="text" for="update-categoria-nome" id="update-categoria-nome">
+                <div class="api-buttons">
+                    <button data-modal="fechar" data-modal-type="update-categoria" class="cancel-button">Cancelar</button>
+                    <button class="send-button" type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="api-modal-container" data-modal="container" data-modal-type="delete-categoria">
+        <div class="api-modal">
+            <h2>Excluir categoria?</h2>
+            <p>Essa ação irá deletar todos os pratos dessa categoria.</p>
+            <form id="delete-categoria" action="">
+                <div class="api-buttons">
+                    <button data-modal="fechar" data-modal-type="delete-categoria" class="cancel-button">Cancelar</button>
+                    <button class="send-button" type="submit">Salvar</button>
                 </div>
             </form>
         </div>

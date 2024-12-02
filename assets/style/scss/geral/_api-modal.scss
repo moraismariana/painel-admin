@@ -1,5 +1,5 @@
 // FORMUÁRIO API (CREATE, UPDATE, DELETE)
-.api-form-container {
+.api-modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,12 +7,15 @@
   width: 100%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+  &.ativo {
+    display: flex;
+  }
 }
 
-.api-form {
+.api-modal {
   box-sizing: border-box;
   background-color: $w2;
   width: 400px;
@@ -24,6 +27,9 @@
     @include title-2;
     color: $c1;
     margin-bottom: $s4;
+  }
+  p {
+    @include text-2;
   }
   label {
     display: block;
