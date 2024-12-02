@@ -51,6 +51,7 @@
     gap: $s4;
   }
   li {
+    -webkit-tap-highlight-color: transparent;
     @include box-shadow;
     padding: 0;
     display: flex;

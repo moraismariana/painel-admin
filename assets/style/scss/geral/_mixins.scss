@@ -83,6 +83,7 @@ $s11: px-rem(160px);
 }
 
 @mixin box-shadow {
+  -webkit-tap-highlight-color: transparent;
   margin-left: $s1;
   margin-right: $s1;
   background-color: $w1;
@@ -102,6 +103,7 @@ $s11: px-rem(160px);
 }
 
 @mixin button {
+  -webkit-tap-highlight-color: transparent;
   background-color: $w1;
   cursor: pointer;
   @include text-2;
@@ -118,6 +120,7 @@ $s11: px-rem(160px);
 }
 
 @mixin button-2 {
+  -webkit-tap-highlight-color: transparent;
   background-color: $c2;
   color: $w1;
   border: none;
@@ -133,6 +136,7 @@ $s11: px-rem(160px);
 }
 
 @mixin arrow-link {
+  -webkit-tap-highlight-color: transparent;
   @include button;
   font-size: 1em;
   // padding-left: $s1;
