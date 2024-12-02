@@ -36,9 +36,11 @@
     @include text-1;
     margin-left: $s4;
     margin-bottom: $s2;
+    margin-top: $s4;
     font-weight: 500;
   }
-  input {
+  input,
+  textarea {
     background-color: $w2;
     font-size: px-rem(14px);
     border: 2px solid $w4;
@@ -47,8 +49,12 @@
     width: 100%;
     box-sizing: border-box;
     outline: none;
+    resize: none;
     &:focus {
       border: 2px solid $c2;
+    }
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
   .cancel-button {
